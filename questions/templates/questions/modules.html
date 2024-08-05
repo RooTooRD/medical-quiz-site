@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Modules  {% endblock title %}
+
+{% block content %}
+
+    {% for module in modules %}
+     <div><a href="{% url 'module-detail' module.id %}"> {{ module.name }} </a> </div> 
+    {% endfor %}
+
+{% endblock content %}
